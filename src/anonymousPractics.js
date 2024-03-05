@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
     var intervalId;
+    const startButton = document.getElementById("start");
+    const endtButton = document.getElementById("end");
     function getRandomColor() {
         const letters = "0123456789ABCDEF";
         let randomColor = "#";
@@ -10,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       
       function changeColor() {
+        startButton.style.background="#12345f";
+
             intervalId = setInterval(function(){
                 const body = document.body;
                 const newColor = getRandomColor();
@@ -22,9 +26,6 @@ document.addEventListener("DOMContentLoaded", function(){
         clearInterval(intervalId);
     }
       
-      const startButton = document.getElementById("start");
-      const endtButton = document.getElementById("end");
-
       startButton.addEventListener("click", changeColor);
       endtButton.addEventListener("click", stopChangeColor);
 
