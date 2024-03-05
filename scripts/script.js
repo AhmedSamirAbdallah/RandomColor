@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
       
       function changeColor() {
         startButton.style.background="#12345f";
-
+        endtButton.style.background="brown";
             intervalId = setInterval(function(){
                 const body = document.body;
                 const newColor = getRandomColor();
@@ -23,11 +23,12 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
     function stopChangeColor(){
+        startButton.style.background="brown";
+        endtButton.style.background="#12345f";
         clearInterval(intervalId);
     }
-      
-      startButton.addEventListener("click", changeColor);
-      endtButton.addEventListener("click", stopChangeColor);
+    startButton.addEventListener("click", changeColor);
+    endtButton.addEventListener("click", stopChangeColor);
 
 
 });
