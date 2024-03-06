@@ -11,8 +11,10 @@
       }
       
     function changeColor() {
-    startButton.style.background="#12345f";
-    endtButton.style.background="brown";
+        startButton.style.background="#12345f";
+        endtButton.style.background="brown";
+        startButton.disabled=true;
+        endtButton.disabled=false;
         intervalId = setInterval(function(){
             const body = document.body;
             const newColor = getRandomColor();
@@ -22,6 +24,8 @@
     }
 
     function stopChangeColor(){
+        startButton.disabled=false;
+        endtButton.disabled=true;
         startButton.style.background="brown";
         endtButton.style.background="#12345f";
         clearInterval(intervalId);
